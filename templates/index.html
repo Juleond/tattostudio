@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>TattoStudio</title>
-</head>
-<body>
-    
-    <nav id="main-nav" class="shadow-lg ">
-        <a href="../index.html"><img src="img/logo.png" style="width: 130px;" alt="Logo TattoStudio" ></a>
-        <ul class="">
-            <li><a href="pages/estilos.html">Estilos</a></li>
-            <li><a href="pages/arte.html">Arte</a></li>
-            <li><a href="pages/galeria.html">Galería</a></li>
-            <li><a href="pages/agendamiento.html">Agenda</a></li>
-            <li><a href="pages/aftercare.html">Implementos</a></li>
-        </ul>
-    </nav>
-    
+{% extends 'tattostudio_app/base.html' %}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+{% block title %}Inicio - TattoStudio{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h1>Bienvenidos a TattoStudio</h1>
+    <p>Explora nuestros estilos y agenda tu hora.</p>
+</div>
+{% endblock %}
