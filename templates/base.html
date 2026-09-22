@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}TattoStudio{% endblock %}</title>
+</head>
+<body>
+    
+    <!-- Barra de navegación centralizada -->
+    <nav id="main-nav" class="shadow-lg">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'img/logo.png' %}" style="width: 130px;" alt="Logo TattoStudio">
+        </a>
+        <ul>
+            <li><a href="{% url 'estilos' %}">Estilos</a></li>
+            <li><a href="{% url 'arte' %}">Arte</a></li>
+            <li><a href="{% url 'galeria' %}">Galería</a></li>
+            <li><a href="{% url 'agendamiento' %}">Agenda</a></li>
+            <li><a href="{% url 'aftercare' %}">Implementos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bloque dinámico donde se inyectará el contenido de cada página hija -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    {% block js %}{% endblock %}
+</body>
+</html>
